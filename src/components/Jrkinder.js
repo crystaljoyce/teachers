@@ -7,7 +7,7 @@ import {
     getAllProducts
   } from '../api';
 
-const Kinder = ({order, token, user, product, products, getProducts, reviews, fetchOrder, setOrder, ProductsView, getAllProducts}) => { 
+const Jrkinder = ({order, token, user, product, products, getProducts, reviews, fetchOrder, setOrder, ProductsView, getAllProducts}) => { 
     const {id,name,grade, prek, jrkinder, kinder, first, second, third, fourth, fifth, sixth, seventh, eighth, admin, imageURL, birthday, restaurant, schoolstore, personalstore, drink, treat, color, flower, food, place, meTime, hobbies, giftcard, pets, dislikes, allergies, wishlist} = product;
 
         useEffect(() => {
@@ -16,8 +16,8 @@ const Kinder = ({order, token, user, product, products, getProducts, reviews, fe
 
             const teachers = products.map(teacher => { 
               const {id,name,grade, prek, jrkinder, kinder, first, second, third, fourth, fifth, sixth, seventh, eighth, admin, imageURL, birthday, restaurant, schoolstore, personalstore, drink, treat, color, flower, food, place, meTime, hobbies, giftcard, pets, dislikes, allergies, wishlist} = teacher;
-              console.log('do you teach prek? ',kinder)
-              if(kinder === true){
+              console.log('do you teach prek? ',jrkinder)
+              if(jrkinder === true){
               return teacher} 
             })
 
@@ -31,9 +31,9 @@ const Kinder = ({order, token, user, product, products, getProducts, reviews, fe
     <div className="products">
 
       {products.map((teacher) => { 
-        const {id, firstname, lastname, imageURL, kinder} = teacher
+        const {id, firstname, lastname, imageURL, jrkinder} = teacher
         console.log('teacher in the return', teacher)
-        if(kinder === true){
+        if(jrkinder === true){
         return ( <div key={id} > 
         <div className="">
         <div > 
@@ -54,4 +54,4 @@ const Kinder = ({order, token, user, product, products, getProducts, reviews, fe
     
 }
 
-export default Kinder;
+export default Jrkinder;

@@ -30,7 +30,8 @@ import {
   AddReview,
   Success,
   Prek, 
-  Kinder
+  Kinder,
+  Jrkinder
 } from './';
 
 const App = () => {
@@ -309,11 +310,15 @@ const App = () => {
           </Route>
 
           <Route exact path="/prek">
-            <Prek getAllProducts={getAllProducts} token={token} user={user} product={product} getProducts={getProducts} setOrder={setOrder} createOrder={createOrder} ProductsView={ProductsView}/>
+            <Prek  getAllProducts={getAllProducts} products={products} token={token} user={user} product={product} getProducts={getProducts} setOrder={setOrder} createOrder={createOrder} ProductsView={ProductsView}/>
           </Route>
 
           <Route exact path="/kinder">
-            <Kinder token={token} user={user} product={product} getProducts={getProducts} setOrder={setOrder} createOrder={createOrder} ProductsView={ProductsView}/>
+            <Kinder  getAllProducts={getAllProducts} products={products} token={token} user={user} product={product} getProducts={getProducts} setOrder={setOrder} createOrder={createOrder} ProductsView={ProductsView}/>
+          </Route>
+
+          <Route exact path="/jrkinder">
+            <Jrkinder  getAllProducts={getAllProducts} products={products} token={token} user={user} product={product} getProducts={getProducts} setOrder={setOrder} createOrder={createOrder} ProductsView={ProductsView}/>
           </Route>
 
           <Route exact path="/checkout/cancel">

@@ -25,7 +25,7 @@ const Home = ({product}) => {
     {/* <Link to="/products">All Teachers</Link> */}
 
     <Link className='each-grade' to="/prek"> Pre-Kindergarten </Link>
-    <div className='each-grade'> Junior Kindergarten </div>
+    <Link className='each-grade' to="/jrkinder"> Junior Kindergarten </Link>
 
     <Link className='each-grade' to="/kinder"> Kindergarten </Link>
     <div className='each-grade'> First Grade </div>

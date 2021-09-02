@@ -161,6 +161,18 @@ body{
   text-align: center;
   /* background-color: #ce0e2d; */
 }
+.page{ 
+  /* height: 250px; */
+  /* grid-gap: 40px 40px; */
+  margin: 39px 0 60px 0;
+  display: grid;
+  grid-template-columns: repeat(6, 33.333333333333336%);
+  /* width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important; */
+  text-align: center;
+  /* background-color: #ce0e2d; */
+}
 .each-grade{ 
   width: 153px; 
   color: white;
@@ -225,6 +237,13 @@ button {
 .small-product img {
   width: 250px;
   height: 250px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.small-teacher img {
+  width: 250px;
+  height: 250px;
+  
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -372,6 +391,30 @@ button {
   margin-left: 0 !important;
   margin-right: 0 !important;
   text-align: center;
+}
+.prek{
+  height: auto;
+  grid-gap: 40px 0px;
+  margin: 39px auto 60px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 33.333333333333336%);
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center;
+}
+.teach-info{ 
+    width: 213px; 
+    color: white;
+    min-height: 117px; 
+    background-size: auto;
+    background-color: #ce0e2d;
+    text-align: center;
+    position: relative;
+    margin: -56px auto 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 15px 15px 15px 15px;
 }
 .prod-info{ 
   width: 213px; 
@@ -582,7 +625,7 @@ button {
   margin-right: 4%;
 }
 .login-image {
-  background-image: url('./images/quiche.jpg');
+  background-image: url('');
   min-height: 431px;
   background-position: 50% 50%;
   background-repeat: no-repeat;

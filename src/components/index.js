@@ -17,3 +17,5 @@ export {default as Success} from './Success';
 export {default as PastOrders} from './PastOrders';
 export {default as Prek} from './PreK';
 export {default as Kinder} from './Kinder';
+export {default as Jrkinder} from './Jrkinder';
+

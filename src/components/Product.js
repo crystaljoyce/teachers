@@ -45,11 +45,16 @@ const SmallProduct = ({user, product, reviews, token, order, fetchOrder, setOrde
   // const avgStars = stars.reduce((a,b) => a + b, 0) / stars.length
 
   return (
-    <div className="shop-container">
-    <div className="small-prod-container">
+    <div className="">
+    <div className="">
     <div className="small-product">
     <Link to={`/products/${id}`}><img src={imageURL ? imageURL : "/images/no-image.png"} alt={name}/> </Link> </div>
-    <h1 className="prod-info">{firstname} {lastname}<br/> Grade: {grade}</h1>
+    <h1 className="prod-info">{firstname} {lastname}<br/>           
+    <p>Grade(s): 
+      {prek === true ? "Pre-k" : ''} {jrkinder === true ? "Junior-K" : ''} {kinder === true ? "Kinder" : ''} {first === true ? "First Grade" : ''} {second === true ? "Second Grade" : ''} {third === true ? "Third Grade" : ''} {fourth === true ? "Fourth Grade" : ''} {fifth === true ? "Fifth Grade" : ''} {sixth === true ? "Sixth Grade" : ''} {seventh === true ? "Seventh Grade" : ''} {eighth === true ? "Eighth Grade" : ''} {admin === true ? "Admin" : ''} 
+
+      
+    </p></h1>
     {/* <h2 className="rev-image">{avgStars > 4
     ? <img className="rev-image" src={'/images/5_stars.png'}/>
     : <img className="rev-image" src={'/images/4_stars.png'}/>}</h2> */}
@@ -145,7 +150,7 @@ const ProductsView = ({order, token, user, products, getProducts, reviews, fetch
     </div>
     <br/>
     <div> 
-    <div>Search school employees: </div>         
+    <div className='home-intro'>Search school employees: </div>         
     <input type='text' onChange={(event) => handleSearch(event)} ></input>
     <button>Search</button>
     </div>
