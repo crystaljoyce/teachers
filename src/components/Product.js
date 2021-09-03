@@ -45,7 +45,7 @@ const SmallProduct = ({user, product, reviews, token, order, fetchOrder, setOrde
   // const avgStars = stars.reduce((a,b) => a + b, 0) / stars.length
 
   return (
-    <div className="">
+    <div className="bg-image img1">
     <div className="">
     <div className="small-product">
     <Link to={`/products/${id}`}><img src={imageURL ? imageURL : "/images/no-image.png"} alt={name}/> </Link> </div>
@@ -93,8 +93,12 @@ const Product = ({user, product, order, token, fetchOrder, setOrder}) => {
 
         <div className="prod-details">
           <h1 className="teacher-name">{firstname} {lastname}</h1> <br/>
+          {console.log('prek value: ',firstname, prek)}
+          {console.log('jrkinder value: ',firstname, jrkinder)}
           {console.log('kinder value: ',firstname, kinder)}
-          <p><b>Grade(s):</b> {kinder} {prek === true ? "Pre-k" : ''} {jrkinder === true ? "Junior-K" : ''} {kinder === true ? "Kinder" : ''}</p>
+
+
+          <p><b>Grade(s):</b> {kinder} {prek === true ? "Pre-k" : ''} {jrkinder === true ? "Junior-K" : ''} {kinder === true ? "Kinder" : ''} {first === true ? "1st Grade" : ''} {second === true ? "2nd Grade" : ''} {third === true ? "3rd Grade" : ''} {fourth === true ? "4th Grade" : ''} {fifth === true ? "5th Grade" : ''} {sixth === true ? "6th Grade" : ''} {seventh === true ? "7th Grade" : ''} {eighth === true ? "8th Grade" : ''} {admin === true ? "Admin" : ''} </p>
           <p><b>Birthday:</b> {birthday}</p>
           <p><b>Favorite Restaurant:</b> {restaurant}</p>
           <p><b>Favorite School Supply Store: </b>{schoolstore}</p>
@@ -136,8 +140,17 @@ const ProductsView = ({order, token, user, products, getProducts, reviews, fetch
 
   },[]);
 
-  const handleSearch = (event) => { 
-    setFilteredData()
+  const handleSearch = (e) => { 
+    const keyword = e.target.value;
+
+    if (keyword !== '') { 
+      const results = products.filter((people) => { 
+        return people.firstname.toLowerCase().startsWith(keyword.toLowerCase());
+      }); 
+      setFilteredData(results)
+    } else {
+    setFilteredData(products)
+    }
   }
 
   return (<>
@@ -151,8 +164,8 @@ const ProductsView = ({order, token, user, products, getProducts, reviews, fetch
     <br/>
     <div> 
     <div className='home-intro'>Search school employees: </div>         
-    <input type='text' onChange={(event) => handleSearch(event)} ></input>
-    <button>Search</button>
+    <input type='text'  onChange={(e) => handleSearch(e)} ></input>
+    <button >Search</button>
     </div>
 
     <div className="products">

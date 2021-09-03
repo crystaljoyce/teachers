@@ -27,7 +27,42 @@ const EditProduct = ({user, token, product, setProduct, getProducts}) => {
             setProduct({...product, [event.target.name]: !inStock});
         } else if (event.target.name === 'price') {
             setProduct({...product, [event.target.name]: Number(event.target.value)});
-        } else {
+        } else if (event.target.name === 'prek') { 
+            setProduct({...product, [event.target.name]: true })
+        } else if (event.target.name === 'jrkinder') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'kinder') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'first') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'second') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'third') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'fourth') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'fifth') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'sixth') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'seventh') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'eighth') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else if (event.target.name === 'admin') { 
+            setProduct({...product, [event.target.name]: true})
+        } 
+        else {
             setProduct({...product, [event.target.name]: event.target.value});
         }
     }
@@ -42,28 +77,28 @@ const EditProduct = ({user, token, product, setProduct, getProducts}) => {
                 <div>
                     <div >Last Name</div>
                     <input required className='form-input' placeholder="" type="text" name='lastname' value={lastname} onChange={handleOnChange}></input>
-                </div>
-                <div>
+                </div> <br/>
+                {/* <div>
                     <div>Grade</div>
                     <input  type="text" name='grade' value={grade} onChange={handleOnChange}></input>
-                </div>
+                </div> */}
 
                 <div>
                     <div>Which grades do you teach? (Please check all that apply.)</div><br/> 
-                    <label> Pre-Kindergarten <input type='checkbox' /> </label>
-                    <label> Junior Kindergarten <input type='checkbox' /> </label>
-                    <label> Kindergarten <input type='checkbox' /> </label>
-                    <label> First Grade <input type='checkbox' /> </label>
-                    <label> Second Grade <input type='checkbox' /> </label>
-                    <label> Third Grade <input type='checkbox' /> </label>
-                    <label> Fourth Grade <input type='checkbox' /> </label>
-                    <label> Fifth Grade <input type='checkbox' /> </label>
-                    <label> Sixth Grade <input type='checkbox' /> </label>
-                    <label> Seventh Grade <input type='checkbox' /> </label>
-                    <label> Eighth Grade <input type='checkbox' /> </label>
-                    <label> Admin and Front Office <input type='checkbox' /> </label>
+                    <label> Pre-Kindergarten <input type='checkbox' name='prek' value={prek} onChange={handleOnChange}  /> </label>
+                    <label> Junior Kindergarten <input type='checkbox' name='jrkinder' value={jrkinder} onChange={handleOnChange}/> </label>
+                    <label> Kindergarten <input type='checkbox' name='kinder' value={kinder} onChange={handleOnChange}/> </label>
+                    <label> First Grade <input type='checkbox' name='first' value={first} onChange={handleOnChange} /> </label>
+                    <label> Second Grade <input type='checkbox' name='second' value={second} onChange={handleOnChange} /> </label>
+                    <label> Third Grade <input type='checkbox' name='third' value={third} onChange={handleOnChange} /> </label>
+                    <label> Fourth Grade <input type='checkbox' name='fourth' value={fourth} onChange={handleOnChange} /> </label>
+                    <label> Fifth Grade <input type='checkbox' name='fifth' value={fifth} onChange={handleOnChange} /> </label>
+                    <label> Sixth Grade <input type='checkbox' name='sixth' value={sixth} onChange={handleOnChange} /> </label>
+                    <label> Seventh Grade <input type='checkbox' name='seventh' value={seventh} onChange={handleOnChange} /> </label>
+                    <label> Eighth Grade <input type='checkbox' name='eighth' value={eighth} onChange={handleOnChange} /> </label>
+                    <label> Admin and Front Office <input type='checkbox' name='admin' value={admin} onChange={handleOnChange} /> </label>
 
-                    <input required placeholder="" type="text" name='grade' value={grade} onChange={handleOnChange}></input>
+                    <input  placeholder="" type="text" name='grade' value={grade} onChange={handleOnChange}></input>
                 </div>
                 <div>
                     <div>Birthday</div>
@@ -71,7 +106,7 @@ const EditProduct = ({user, token, product, setProduct, getProducts}) => {
                 </div>
                 <div>
                     <div>Restaurant</div>
-                    <input required type='text' name='restaurant' value={restaurant} onChange={handleOnChange}></input>
+                    <input  type='text' name='restaurant' value={restaurant} onChange={handleOnChange}></input>
                 </div>
                 <div>
                     <div>Store where you like to buy school supplies</div>
